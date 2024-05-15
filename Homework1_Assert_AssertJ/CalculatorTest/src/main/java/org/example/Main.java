@@ -8,7 +8,7 @@ public class Main {
   public static void main(String[] args) {
     assertThat(Calculator.calculateDiscount(100.0, 0.5)).isEqualTo(50.0);
     assertThatThrownBy(()->Calculator.calculateDiscount(100.0, 0)).isInstanceOf(ArithmeticException.class);
-    assertThat(Calculator.calculateDiscount(100.0, 0.5)).isEqualTo(10.0);
+    assertThat(Calculator.calculateDiscount(100.0, 0.5)).isNotEqualTo(10.0);
     assertThatThrownBy(()->Calculator.calculateDiscount(100.0, 0)).isInstanceOf(NullPointerException.class);
   }
 }
